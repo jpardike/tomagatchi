@@ -1,38 +1,104 @@
-.App {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  padding: 35px 50px;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+.app {
+  height: 100vh;
+}
+.lightsoff {
+  background: #333;
+  color: #eee;
+}
+.header {
+  margin: 0 0 20px;
+}
+/* FORM ****************************************************/
+.form {
+  margin: 0 0 30px;
+}
+.form_input {
+  padding: 7px;
+  margin: 0 20px 20px 0;
+}
+.form_button {
+  padding: 7px 15px;
+  margin: 0 20px 20px 0;
   text-align: center;
+  cursor: pointer;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.controlsRow {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+.gameControls_bagsOfFood {
+  display: inline-block;
+  margin: 0 20px 20px 0;
+  font-size: 23px;
+}
+.gameControls_button {
+  height: 33px;
+  padding: 7px 15px;
+  margin: 0 20px 20px 0;
+  text-align: center;
+  cursor: pointer;
+}
+.pets {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.pet {
+  max-width: 300px;
+  border: 2px solid #555;
+  background: #fff9ed;
+  padding: 25px;
+  margin: 0 25px 25px 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lightsoff .pet {
+  background: #777;
+  border: 2px solid #a8a8a8;
+  color: #eee;
+}
+.pet:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.pet_name {
+  margin-bottom: 10px;
+}
+.pet_img {
+  width: 246px;
+  height: 185px;
+  background-size: contain;
+  background-image: url("https://media.npr.org/assets/img/2013/08/02/snail-8296a552f7bd1064368205306ff8a3c7c7bdc7c4-s800-c85.jpg"); 
+  margin: 0 0 20px;
+}
+.pet_statusGroup {
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.pet_status {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+}
+.pet_interactions {
+  display: flex;
+  justify-content: space-between;
+}
+.pet_interactionButton {
+  padding: 7px 15px;
 }
